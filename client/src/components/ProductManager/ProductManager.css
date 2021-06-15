@@ -1,0 +1,34 @@
+.products-container {
+  height: calc(100vh - 80px);
+  background-color: #872f2f;
+  box-shadow: 0px 100px 10000px 100px black inset;
+}
+
+.MuiSvgIcon-colorAction {
+  color: white !important;
+}
+
+.MuiDialogContent-root {
+  text-align: center !important;
+}
+
+.MuiAlert-root {
+  display: table-cell !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  width: 250px !important;
+  height: 90px !important;
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  margin: auto !important;
+}
+
+.add-icon-container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}

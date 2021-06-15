@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { createFFmpeg, fetchFile } from "@ffmpeg/ffmpeg";
 
 export const Converter = () => {
-  const ffmpeg = createFFmpeg({ log: true });
+  const ffmpeg = createFFmpeg({ log: false });
   const [ready, setReady] = useState(false);
   const [video, setVideo] = useState();
   const [gif, setGif] = useState();

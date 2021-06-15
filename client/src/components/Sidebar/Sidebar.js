@@ -77,10 +77,6 @@ export const NavLink = styled(Link)`
   padding: 1rem;
   height: 100%;
   cursor: pointer;
-
-  &.active {
-    color: #15cdfc;
-  }
 `;
 
 const SidebarNav = styled.nav`

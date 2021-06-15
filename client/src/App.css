@@ -21,7 +21,7 @@
 .converter-container {
   display: flex;
   height: 90vh;
-  align-items: top;
+  align-items: center;
   justify-content: center;
   font-size: 2rem;
   padding: 2rem;

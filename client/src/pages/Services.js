@@ -12,11 +12,3 @@ export const Services = () => {
 export const Converter_ = () => {
   return <Converter />;
 };
-
-export const ProductManager_ = () => {
-  return (
-    <div>
-      <h1>asdasdads</h1>
-    </div>
-  );
-};
