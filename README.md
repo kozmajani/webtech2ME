@@ -27,4 +27,4 @@ npm start
 
 
 
-#### Miskolci Egyetem - 2021/20/2 - Webtechnológiák II.
+#### ***Miskolci Egyetem - 2021/20/2 - Webtechnológiák II.***
