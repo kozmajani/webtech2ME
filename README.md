@@ -13,6 +13,8 @@ npm install @material-ui/lab
 ## Futtatási parancsok:
 >NOTE: To run the app in development mode Node.js v14.16.1 ( including npm 6.14.12 ) is required.
 
+#### Node.js
+
 ```
 cd server
 
@@ -20,7 +22,7 @@ npm install
 
 npm run serve
 ```
-
+#### React
 ```
 cd client
 
