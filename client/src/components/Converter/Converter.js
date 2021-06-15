@@ -48,7 +48,7 @@ export const Converter = () => {
   return ready ? (
     <div className="converter-container">
       <div>
-        <div>
+        <div style={{ paddingBottom: "5rem" }}>
           <h2>.GIF CONVERTER</h2>
         </div>
         {video && (
@@ -60,11 +60,9 @@ export const Converter = () => {
           onChange={(e) => setVideo(e.target.files?.item(0))}
         />
 
-        <h3 align="center">Result</h3>
+        <button onClick={ConvertToGif}>Convert to .gif</button>
 
-        <button onClick={ConvertToGif} align="center">
-          Convert to .gif
-        </button>
+        <h3 style={{ paddingTop: "2rem", textAlign: "center" }}>Result</h3>
 
         {gif && <img src={gif} alt="resultGif" width="250" />}
       </div>

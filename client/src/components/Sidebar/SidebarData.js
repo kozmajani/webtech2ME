@@ -34,7 +34,13 @@ export const SidebarData = [
 
     subNav: [
       {
-        title: "Converter",
+        title: "Product Manager",
+        path: "/services/product-manager",
+        icon: <FaIcons.FaBuffer />,
+        cName: "sub-nav",
+      },
+      {
+        title: "GIF Converter",
         path: "/services/converter",
         icon: <FaIcons.FaBuffer />,
         cName: "sub-nav",

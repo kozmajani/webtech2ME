@@ -13,11 +13,15 @@ const Author = () => {
           </div>
         </div>
         <div>
-          <b>Programtervező informatikus</b>
+          <b>Programtervező informatikus BSc</b>
         </div>
         <div>Miskolci Egyetem</div>
         <div>kozmajani14@gmail.com</div>
-        <div>github.com/kozmajani/szakdolgozat</div>
+        <div style={{ padding: "1rem" }}>
+          <a href={"https://github.com/kozmajani/webtech2ME"}>
+            Github repository
+          </a>
+        </div>
       </div>
     </div>
   );

@@ -52,9 +52,9 @@ export const NavBtn = styled.nav`
 `;
 
 export const NavBtnLink = styled(Link)`
-  border-radius: 9px;
-  background: #256ce1;
-  padding: 10px 22px;
+  border-radius: 10px;
+  background: #872f2f;
+  padding: 10px 20px;
   color: #fff;
   border: none;
   outline: none;
@@ -74,7 +74,7 @@ export const NavLink = styled(Link)`
   display: flex;
   align-items: center;
   text-decoration: none;
-  padding: 0 1rem;
+  padding: 1rem;
   height: 100%;
   cursor: pointer;
 
@@ -93,6 +93,7 @@ const SidebarNav = styled.nav`
   top: 0;
   left: ${({ sidebar }) => (sidebar ? "0" : "-100%")};
   transition: 350ms;
+  box-shadow: 2px 0px 5px 5px rgba(0, 0, 0, 0.2);
   z-index: 10;
 `;
 
@@ -100,7 +101,7 @@ const SidebarWrap = styled.div`
   width: 100%;
 `;
 
-const Sidebar = () => {
+const Sidebar = ({ loggedIn, logout }) => {
   const [sidebar, setSidebar] = useState(false);
 
   const showSidebar = () => setSidebar(!sidebar);
@@ -109,15 +110,35 @@ const Sidebar = () => {
     <>
       <IconContext.Provider value={{ color: "#fff" }}>
         <Nav>
-          <NavIcon to="#">
-            <FaIcons.FaBars onClick={showSidebar} />
-          </NavIcon>
+          {loggedIn ? (
+            <NavIcon to="#">
+              <FaIcons.FaBars onClick={showSidebar} />
+            </NavIcon>
+          ) : (
+            <></>
+          )}
+
           <NavMenu className="topnav">
-            <NavLink to="/be-a-member">Be a member</NavLink>
-            <NavBtn>
-              <NavBtnLink to="/sign-in">Sign In</NavBtnLink>
-            </NavBtn>
-            <div className="title"> Webtechnológiák II.</div>
+            {loggedIn ? (
+              <NavBtn>
+                <NavBtnLink to="/login" onClick={logout}>
+                  Sign Out
+                </NavBtnLink>
+              </NavBtn>
+            ) : (
+              <>
+                <NavBtn>
+                  <NavBtnLink to="/login">Sign In</NavBtnLink>
+                </NavBtn>
+                <NavLink to="/register">Be a member</NavLink>
+              </>
+            )}
+
+            <NavIcon>
+              <NavLink to="/home">
+                <AiIcons.AiFillHome />
+              </NavLink>
+            </NavIcon>
           </NavMenu>
         </Nav>
         <SidebarNav sidebar={sidebar}>

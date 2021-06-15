@@ -1,35 +1,44 @@
 import "./App.css";
+import { useState } from "react";
 import Sidebar from "./components/Sidebar/Sidebar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import {
-  Services,
-  Converter_,
-  ServiceTwo,
-  ServiceThree,
-} from "./pages/Services";
+import { Converter_, ProductManager_ } from "./pages/Services";
 import Author from "./pages/Author";
 import Support from "./pages/Support";
-import SignIn from "./pages/SignIn";
-import Register from "./pages/Register";
+import Login from "./components/Authorization/Login/Login";
+import Register from "./components/Authorization/Register/Register";
 
 function App() {
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  const login = () => {
+    setLoggedIn(true);
+  };
+  const logout = () => {
+    setLoggedIn(false);
+  };
+
   return (
     <Router>
-      <Sidebar />
+      <Sidebar loggedIn={loggedIn} logout={logout} />
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/home" exact component={Home} />
         <Route path="/about" exact component={About} />
-        <Route path="/services" exact component={Services} />
         <Route path="/services/converter" exact component={Converter_} />
-        <Route path="/services/service2" exact component={ServiceTwo} />
-        <Route path="/services/service3" exact component={ServiceThree} />
+        <Route
+          path="/services/product-manager"
+          exact
+          component={ProductManager_}
+        />
         <Route path="/author" exact component={Author} />
         <Route path="/support" exact component={Support} />
-        <Route path="/sign-in" exact component={SignIn} />
-        <Route path="/be-a-member" exact component={Register} />
+        <Route path="/login">
+          <Login login={login} />
+        </Route>
+        <Route path="/register" exact component={Register} />
       </Switch>
     </Router>
   );

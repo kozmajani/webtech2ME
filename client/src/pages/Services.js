@@ -13,18 +13,10 @@ export const Converter_ = () => {
   return <Converter />;
 };
 
-export const ServiceTwo = () => {
+export const ProductManager_ = () => {
   return (
-    <div className="services">
-      <h1>Services/service2</h1>
-    </div>
-  );
-};
-
-export const ServiceThree = () => {
-  return (
-    <div className="services">
-      <h1>Services/service3</h1>
+    <div>
+      <h1>asdasdads</h1>
     </div>
   );
 };
